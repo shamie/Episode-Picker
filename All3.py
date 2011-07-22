@@ -2,6 +2,7 @@ import random
 which_series = ["TOS", "TAS", "TNG", "DS9", "VOY", "ENT"]
 
 def TOS():
+	print "Series: The Original Series"
 	seasons = [1, 2, 3]
 	season1 = []
 	season2 = []
@@ -31,6 +32,7 @@ def TOS():
 		print "Episode: %d" % season3[1]
 		
 def TAS():
+	print "Series: The Animated Series"
 	seasons = [1, 2]
 	season1 = []
 	season2 = []
@@ -53,6 +55,7 @@ def TAS():
 		print "Episode: %d" % season2[1]
 
 def TNG():
+	print "Series: The Next Generation"
 	seasons = [1, 2, 3, 4, 5, 6, 7]
 	season1 = []
 	season2 = []
@@ -110,6 +113,7 @@ def TNG():
 		print "Episode: %d" % season7[1]
 
 def DS9():
+	print "Series: Deep Space Nine"
 	seasons = [1, 2, 3, 4, 5, 6, 7]
 	season1 = []
 	season2 = []
@@ -167,6 +171,7 @@ def DS9():
 		print "Episode: %d" % season7[1]
 
 def VOY():
+	print "Series: Voyager"
 	seasons = [1, 2, 3, 4, 5, 6, 7]
 	season1 = []
 	season2 = []
@@ -224,6 +229,7 @@ def VOY():
 		print "Episode: %d" % season7[1]
 
 def ENT():
+	print "Series: Enterprise"
 	seasons = [1, 2, 3, 4]
 	season1 = []
 	season2 = []
@@ -278,8 +284,6 @@ series = raw_input("> TOS, TAS, TNG, DS9, VOY, ENT, or random \n> ")
 if series == random:
 	random.shuffle(which_series)
 	chosen_series = which_series[1]
-	print "Series: " + which_series[1]
 	chose_series(chosen_series)
 else:
-	print "Series: " + series
 	chose_series(series)
