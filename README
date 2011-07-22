@@ -1,0 +1,6 @@
+First version of the Star Trek episode picker.
+
+This version chooses the episode completely at random, with minimal interaction with the user. 
+The next version will include episode titles and descriptions.
+Version three will take into account ratings of the episodes using 
+Memory Alpha
