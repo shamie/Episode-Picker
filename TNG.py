@@ -41,16 +41,16 @@ if season == 1:
 elif season == 2:
 	random.shuffle(season2)
 	print "Episode: %d" % season2[1]
-elif season == 2:
+elif season == 3:
 	random.shuffle(season3)
 	print "Episode: %d" % season3[1]
-elif season == 2:
+elif season == 4:
 	random.shuffle(season4)
 	print "Episode: %d" % season4[1]
-elif season == 2:
+elif season == 5:
 	random.shuffle(season5)
 	print "Episode: %d" % season5[1]
-elif season == 2:
+elif season == 6:
 	random.shuffle(season6)
 	print "Episode: %d" % season6[1]
 else:
