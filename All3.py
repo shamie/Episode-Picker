@@ -258,13 +258,13 @@ def ENT():
 		random.shuffle(season4)
 		print "Episode: %d" % season4[1]
 
-def random():
+series = raw_input("> TOS, TAS, TNG, DS9, VOY, ENT, or random \n> ")
+
+if series == random:
 	which_series = ["TOS", "TAS", "TNG", "DS9", "VOY", "ENT"]
 	random.shuffle(which_series)
-	series = which_series[1]
-	print "Series: " + series
-
-def series_selector(choice):
+	chosen_series = which_series[1]
+	print "Series: " + chosen_series
 	if series == "TOS":
 		TOS()
 	elif series == "TAS":
@@ -277,11 +277,17 @@ def series_selector(choice):
 		VOY()
 	else:
 		ENT()
-
-series = raw_input("> TOS, TAS, TNG, DS9, VOY, ENT, or random \n> ")
-
-if series == random:
-	random()
 else:
 	print "Series: " + series
-	series_selector(series)
+	if series == "TOS":
+		TOS()
+	elif series == "TAS":
+		TAS()
+	elif series == "TNG":
+		TNG()
+	elif series == "DS9":
+		DS9()
+	elif series == "VOY":
+		VOY()
+	else:
+		ENT()
