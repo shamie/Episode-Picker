@@ -278,12 +278,16 @@ def chose_series(choice):
 		VOY()
 	else:
 		ENT()
-		
+
+# User input, would they like to watch a specific series 
+# or have one chosen for them?	
 series = raw_input("> TOS, TAS, TNG, DS9, VOY, ENT, or random \n> ")
 
+# if they want something random, the computer chooses
+# and then moves on to season/episode selection	
 if series == random:
 	random.shuffle(which_series)
 	chosen_series = which_series[1]
 	chose_series(chosen_series)
-else:
-	chose_series(series)
+else: # if not they type in their selection and 
+	chose_series(series) # computer goes with that
