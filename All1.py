@@ -261,7 +261,7 @@ def ENT():
 which_series = ["The Original Series","The Animated Series", "The Next Generation","Deep Space Nine","Voyager", "Enterprise"]
 
 random.shuffle(which_series)
-series = which_series[1]
+series = which_series[0]
 print "Series: " + series
 
 if series == "The Original Series":
