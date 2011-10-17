@@ -8,13 +8,13 @@ def TOS():
 	season2 = []
 	season3 = []
 
-	for i in range(1, 29):
+	for i in range(1, 31):
 		season1.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season2.append(i)
 
-	for i in range(1, 24):
+	for i in range(1, 25):
 		season3.append(i)
 
 	random.shuffle(seasons)
@@ -37,10 +37,10 @@ def TAS():
 	season1 = []
 	season2 = []
 
-	for i in range(1, 16):
+	for i in range(1, 17):
 		season1.append(i)
 
-	for i in range(1, 6):
+	for i in range(1, 7):
 		season2.append(i)
 
 	random.shuffle(seasons)
@@ -65,25 +65,25 @@ def TNG():
 	season6 = []
 	season7 = []
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season1.append(i)
 
-	for i in range(1, 22):
+	for i in range(1, 23):
 		season2.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season3.append(i)
 	
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season4.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season5.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season6.append(i)
 	
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season7.append(i)
 
 	random.shuffle(seasons)
@@ -123,25 +123,25 @@ def DS9():
 	season6 = []
 	season7 = []
 
-	for i in range(1, 20):
+	for i in range(1, 21):
 		season1.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season2.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season3.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season4.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season5.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season6.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season7.append(i)
 
 	random.shuffle(seasons)
@@ -181,25 +181,25 @@ def VOY():
 	season6 = []
 	season7 = []
 
-	for i in range(1, 16):
+	for i in range(1, 17):
 		season1.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season2.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season3.append(i)
 	
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season4.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season5.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season6.append(i)
 	
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season7.append(i)
 
 	random.shuffle(seasons)
@@ -236,16 +236,16 @@ def ENT():
 	season3 = []
 	season4 = []
 
-	for i in range(1, 25):
+	for i in range(1, 26):
 		season1.append(i)
 
-	for i in range(1, 26):
+	for i in range(1, 27):
 		season2.append(i)
 
-	for i in range(1, 24):
+	for i in range(1, 25):
 		season3.append(i)
 	
-	for i in range(1, 22):
+	for i in range(1, 23):
 		season4.append(i)
 
 	random.shuffle(seasons)
@@ -265,31 +265,25 @@ def ENT():
 		random.shuffle(season4)
 		print "Episode: %d" % season4[0]
 
-def chose_series(choice):
-
-	choice = choice.upper()
-	if choice == "TOS":
-		TOS()
-	elif choice == "TAS":
-		TAS()
-	elif choice == "TNG":
-		TNG()
-	elif choice == "DS9":
-		DS9()
-	elif choice == "VOY":
-		VOY()
-	else:
-		ENT()
-
 # User input, would they like to watch a specific series 
 # or have one chosen for them?	
 series = raw_input("> TOS, TAS, TNG, DS9, VOY, ENT, or random \n> ")
 
 # if they want something random, the computer chooses
 # and then moves on to season/episode selection	
-if series == "random":
+ # or the computer randomizes it!
+if series == "TOS":
+	TOS()
+elif series == "TAS":
+	TAS()
+elif series == "TNG":
+	TNG()
+elif series == "DS9":
+	DS9()
+elif series == "VOY":
+	VOY()
+elif series == "ENT":
+	ENT()
+else:
 	random.shuffle(which_series)
-	chosen_series = which_series[0]
-	chose_series(chosen_series) 		# WHY YOU NO WORK?
-else: # if not they type in their selection and 
-	chose_series(series) # computer goes with that
+	chosen = which_series[0]
